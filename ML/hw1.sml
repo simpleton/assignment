@@ -14,9 +14,9 @@ fun number_in_month (dlist:(int*int*int) list, month: int) =
 		       
 fun number_in_months (dlist:(int*int*int) list, mlist: int list) =
     if null mlist then
-	[]
+	0
     else
-	number_in_month(dlist, (hd mlist))::number_in_months(dlist, (tl mlist))
+	number_in_month(dlist, (hd mlist)) + number_in_months(dlist, (tl mlist))
 
 fun dates_in_month (dlist: (int*int*int) list, month: int) = 
     if (null dlist) then
@@ -41,7 +41,7 @@ fun get_nth (slist: string list, index: int) =
 fun date_to_string (date:int*int*int) =
     let val monthl = [
 	    "January",
-	    "Feburary",
+	    "February",
 	    "March",
 	    "April",
 	    "May",
@@ -74,9 +74,9 @@ fun month_range (day1:int, day2: int) =
 	    if from > to then
 		nil
 	    else
-		from::range(from+1, to)
+		what_month(from)::range(from+1, to)
     in
-	range(what_month(day1), what_month(day2))
+	range(day1, day2)
     end
 
 fun oldest (dates:(int*int*int) list) =

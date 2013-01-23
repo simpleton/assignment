@@ -9,6 +9,7 @@ dates_in_months([(12,1,321),(1,22,3), (2,3,4), (3,3,4),(1,1,1),(2,2,2)], [3,1,2]
 
 get_nth(["fds","aa","1","2"], 1);
 date_to_string(1986,12,31);
+date_to_string(1,2,98);
 number_before_reaching_sum(13,[1,2,1,2,3,4,1,2]);
 number_before_reaching_sum(2,[1,2,1,2,3,4,1,2]);
 what_month(100);
@@ -17,6 +18,8 @@ month_range(1,200);
 month_range(1,2);
 month_range(1,365);
 month_range(100,365);
+month_range(1,365);
+month_range(100,102);
 
 oldest([]);
 oldest([(1986,12,31),(1999,1,1),(12222,1,1),(2000,1,1)]);
